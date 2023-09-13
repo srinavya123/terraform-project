@@ -7,7 +7,7 @@ resource "aws_instance" "one" {
   ami             = "ami-0f844a9675b22ea32"
   instance_type   = "t2.micro"
   key_name        = "Ansible"
-  vpc_security_group_ids = [aws_security_group.five.id]
+  vpc_security_group_ids = [aws_security_group.seven.id]
   availability_zone = "us-east-1a"
   user_data       = <<EOF
 #!/bin/bash
@@ -26,7 +26,7 @@ resource "aws_instance" "two" {
   ami             = "ami-0f844a9675b22ea32"
   instance_type   = "t2.micro"
   key_name        = "Ansible"
-  vpc_security_group_ids = [aws_security_group.five.id]
+  vpc_security_group_ids = [aws_security_group.seven.id]
   availability_zone = "us-east-1b"
   user_data       = <<EOF
 #!/bin/bash
@@ -45,7 +45,7 @@ resource "aws_instance" "three" {
   ami             = "ami-0f844a9675b22ea32"
   instance_type   = "t2.micro"
   key_name        = "Ansible"
-  vpc_security_group_ids = [aws_security_group.five.id]
+  vpc_security_group_ids = [aws_security_group.seven.id]
   availability_zone = "us-east-1a"
   tags = {
     Name = "app-server-1"
@@ -56,7 +56,7 @@ resource "aws_instance" "four" {
   ami             = "ami-0f844a9675b22ea32"
   instance_type   = "t2.micro"
   key_name        = "Ansible"
-  vpc_security_group_ids = [aws_security_group.five.id]
+  vpc_security_group_ids = [aws_security_group.seven.id]
   availability_zone = "us-east-1b"
   tags = {
     Name = "app-server-2"
@@ -67,7 +67,7 @@ resource "aws_instance" "five" {
   ami             = "ami-0f844a9675b22ea32"
   instance_type   = "t2.micro"
   key_name        = "Ansible"
-  vpc_security_group_ids = [aws_security_group.five.id]
+  vpc_security_group_ids = [aws_security_group.seven.id]
   availability_zone = "us-east-1a"
   tags = {
     Name = "db-server-1"
@@ -78,7 +78,7 @@ resource "aws_instance" "six" {
   ami             = "ami-0f844a9675b22ea32"
   instance_type   = "t2.micro"
   key_name        = "Ansible"
-  vpc_security_group_ids = [aws_security_group.five.id]
+  vpc_security_group_ids = [aws_security_group.seven.id]
   availability_zone = "us-east-1b"
   tags = {
     Name = "db-server-2"
