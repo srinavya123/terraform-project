@@ -1,6 +1,6 @@
 resource "aws_elb" "bar" {
   name               = "navya-terraform-elb"
-  availability_zones = ["ap-southeast-1a", "ap-southeast-1b"]
+  availability_zones = ["us-east-1a", "us-east-1b"]
 
   listener {
     instance_port     = 80
